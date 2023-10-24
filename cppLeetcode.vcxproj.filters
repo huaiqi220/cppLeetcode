@@ -24,5 +24,8 @@
     <ClCompile Include="94.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="242.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
