@@ -131,6 +131,8 @@
     <ClCompile Include="160.cpp" />
     <ClCompile Include="242.cpp" />
     <ClCompile Include="2698.cpp" />
+    <ClCompile Include="73.cpp" />
+    <ClCompile Include="73_2.cpp" />
     <ClCompile Include="94.cpp" />
     <ClCompile Include="cppLeetcode.cpp" />
   </ItemGroup>
