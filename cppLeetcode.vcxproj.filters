@@ -42,7 +42,7 @@
     <ClCompile Include="148.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="psort.cpp">
+    <ClCompile Include="psort_148.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
