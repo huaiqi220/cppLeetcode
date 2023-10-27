@@ -137,6 +137,7 @@
     <ClCompile Include="73.cpp" />
     <ClCompile Include="73_2.cpp" />
     <ClCompile Include="94.cpp" />
+    <ClCompile Include="994.cpp" />
     <ClCompile Include="cppLeetcode.cpp" />
     <ClCompile Include="psort_148.cpp" />
   </ItemGroup>
