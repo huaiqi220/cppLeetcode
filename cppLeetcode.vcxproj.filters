@@ -57,5 +57,11 @@
     <ClCompile Include="51.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="198.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="300.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
