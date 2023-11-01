@@ -141,10 +141,12 @@
     <ClCompile Include="148.cpp" />
     <ClCompile Include="3.cpp" />
     <ClCompile Include="300.cpp" />
+    <ClCompile Include="322.cpp" />
     <ClCompile Include="34.cpp" />
     <ClCompile Include="347.cpp" />
     <ClCompile Include="35.cpp" />
     <ClCompile Include="42.cpp" />
+    <ClCompile Include="48.cpp" />
     <ClCompile Include="51.cpp" />
     <ClCompile Include="62.cpp" />
     <ClCompile Include="73.cpp" />
