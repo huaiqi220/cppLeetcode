@@ -4,28 +4,53 @@
 
 #include "vector"
 
-
 class Solution {
 public:
     void rotate(std::vector<std::vector<int>>& matrix) {
-        // [y,x] - > [x, n - x]
-        std::vector<std::vector<int>> ret;
+        // [y,x] - > [x, n - y]7
         int n = matrix.size();
-        for (int i = 0; i < n; i++)
+        int l;
+        int c;
+        if (n % 2 == 0)
         {
-            std::vector<int> item(0,n);
-            ret.push_back(item);
+            l = n / 2;
+            c = n / 2;
+        }
+        else
+        {
+            l = n / 2 + 1;
+            c = n / 2;
         }
 
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < c; i++)
         {
-            for (int j = 0; j < n; j++)
+            for (int j = 0; j < l; j++)
             {
-                ret[j, n - i] = matrix[i, j];
+                int cur = matrix[i][j];
+                // 
+                matrix[i][j] = matrix[n - 1 - j][i];
+                matrix[n - 1 - j][i] = matrix[n - 1 - i][n - 1 - j];
+                matrix[n - 1 - i][n - 1 - j] = matrix[j][n - 1 - i];
+                matrix[j][n - 1 - i] = cur;
+
             }
         }
-        matrix = ret;
+
 
 
     }
 };
+
+//
+//
+//      __ __ __ __ __
+//     |[i][j]  -->   |[j][n-i]
+//     |              |
+//     |              |
+//     |              |
+//     |              |
+//     |__ __ __ __ __|[n-i][n-j]
+//     [n-j][i]  <--
+//
+//
+//
