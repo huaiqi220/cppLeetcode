@@ -127,9 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="100115.cpp" />
+    <ClCompile Include="100116.cpp" />
     <ClCompile Include="1005.cpp" />
     <ClCompile Include="102.cpp" />
     <ClCompile Include="104.cpp" />
+    <ClCompile Include="108.cpp" />
     <ClCompile Include="121.cpp" />
     <ClCompile Include="141.cpp" />
     <ClCompile Include="142.cpp" />
@@ -160,6 +163,7 @@
     <ClCompile Include="73_2.cpp" />
     <ClCompile Include="74.cpp" />
     <ClCompile Include="94.cpp" />
+    <ClCompile Include="98.cpp" />
     <ClCompile Include="994.cpp" />
     <ClCompile Include="best_k_215.cpp" />
     <ClCompile Include="cppLeetcode.cpp" />
