@@ -166,6 +166,7 @@
     <ClCompile Include="73.cpp" />
     <ClCompile Include="73_2.cpp" />
     <ClCompile Include="74.cpp" />
+    <ClCompile Include="92.cpp" />
     <ClCompile Include="94.cpp" />
     <ClCompile Include="98.cpp" />
     <ClCompile Include="994.cpp" />
