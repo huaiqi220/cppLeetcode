@@ -1,5 +1,7 @@
 
 
+#include <vector>
+
 
 class Solution {
 
@@ -12,27 +14,49 @@ class Solution {
     };
 public:
     ListNode* reverseBetween(ListNode* head, int left, int right) {
-        int count = 1;
         ListNode* cur = head;
-        ListNode* l = nullptr;
-        ListNode* r = nullptr;
-        while (cur != nullptr) {
-            cur = cur->next;
-            count++;
-            if (count = left)
-            {
-                l = cur;
-                continue;
-            }
+        ListNode* temp = nullptr;
+        std::vector<ListNode*> nodeVector;
+        while (cur != nullptr)
+        {
+            nodeVector.push_back(cur);
+            // cur = cur->next;
 
-            if (count = right)
-            {
-                r = cur;
-                continue;
-            }
+            temp = cur->next;
+            cur->next = nullptr;
+            cur = temp;
         }
 
+        while (left < right)
+        {
+            swap(nodeVector, left, right);
+            left++;
+            right--;
+        }
 
+        return vec2list(nodeVector);
 
     }
+
+    void swap(std::vector<ListNode*> &nodeVector, int left, int right)
+    {
+        ListNode* end = nodeVector[right - 1];
+        nodeVector[right - 1] = nodeVector[left - 1];
+        nodeVector[left - 1] = end;
+    }
+
+    ListNode* vec2list(std::vector<ListNode*>& nodeVector)
+    {
+        ListNode* head = nodeVector[0];
+        ListNode* cur = nodeVector[0];
+
+        for (int i = 1; i < nodeVector.size();i++)
+        {
+            cur->next = nodeVector[i];
+            cur = nodeVector[i];
+        }
+
+        return head;
+    }
+
 };
