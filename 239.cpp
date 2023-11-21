@@ -6,6 +6,14 @@
 
 
 class Solution {
+    struct ListNode
+
+    {
+        int val;
+        ListNode* next;
+        ListNode() : val(0), next(NULL) {}
+        ListNode(int x) : val(x), next(NULL) {}
+    };
     
 public:
     //std::vector<int> maxSlidingWindow(std::vector<int>& nums, int k) {
@@ -156,7 +164,7 @@ public:
     // 没什么好说的，C++都写超时，只能说功力不够
 
 
-    std::vector<int> maxSlidingWindow(std::vector<int>& nums, int k) {
+    std::vector<int> maxslidingwindow(std::vector<int>& nums, int k) {
         std::priority_queue<std::pair<int, int>> q;
         std::vector<int> kmax;
         for (int i = 0; i < k; i++)
@@ -174,8 +182,23 @@ public:
             kmax.push_back(q.top().first);
         }
         return kmax;
-
-
     }
 
+    //std::vector<int> maxSlidingWindow(std::vector<int>& nums, int k) {
+    //    std::vector<int> kmax;
+    //    ListNode head = ListNode();
+    //    ListNode* cur = &head;
+    //    std::queue<int> temp;
+    //    for (int i = 0; i < k; i++) {
+    //        temp.push(nums[i]);
+    //        
+    //        cur = cur->next;
+    //    }
+
+
+    //}
+
+    //void listAddItem()
+    // 跟vector维护一个时间复杂度，不往下写了
+    //---------------------------------------------------------------
 };
