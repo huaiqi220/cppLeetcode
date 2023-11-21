@@ -3,6 +3,8 @@
 
 #include <queue>
 
+
+
 class Solution {
     
 public:
@@ -152,5 +154,28 @@ public:
     //---------------------------------------------------------------
 
     // 没什么好说的，C++都写超时，只能说功力不够
+
+
+    std::vector<int> maxSlidingWindow(std::vector<int>& nums, int k) {
+        std::priority_queue<std::pair<int, int>> q;
+        std::vector<int> kmax;
+        for (int i = 0; i < k; i++)
+        {
+            q.emplace(std::pair<int, int>(nums[i], i));
+        }
+        kmax.push_back(q.top().first);
+
+        for (int j = k; j < nums.size(); j++)
+        {
+            q.emplace(std::pair<int, int>(nums[j], j));
+            while(q.top().second <= j - k) {
+                q.pop();
+            }
+            kmax.push_back(q.top().first);
+        }
+        return kmax;
+
+
+    }
 
 };
