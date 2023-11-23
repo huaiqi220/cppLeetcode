@@ -3,129 +3,165 @@
 
 #include <vector>
 #include <string>
-#include <unordered_map>
+
 
 class Solution {
 public:
+    // 不信邪来重做一次，这次要争取快点做出来
+    // 不太满意，还是遇到了Bug，
+    // 在声明char l[][4]时，如果使用{'a','b','c'}初始化，则最后一个元素为''，不判断会导致输出空结果。
     std::vector<std::string> letterCombinations(std::string digits) {
         std::vector<std::string> result;
-        if (digits.size() == 0) return result;
-        std::string res;
-        backTracking(0, digits.size(), digits, res, result);
+        if (digits.size() == 0)return result;
+        std::string temp;
+        backTracking(0, digits.size(), digits, temp, result);
         return result;
+
     }
 
-    void backTracking(int curIndex, int size, const std::string& digits, std::string& res, std::vector<std::string>& result) {
+    void backTracking(int curIndex, int size, const std::string& digits, std::string& temp, std::vector<std::string>& result)
+    {
         if (curIndex == size) {
-            result.push_back(res);
+            result.push_back(temp);
             return;
         }
-        char a2[] = { 'a','b','c' };
-        char a3[] = { 'd','e','f' };
-        char a4[] = { 'g','h','i' };
-        char a5[] = { 'j','k','l' };
-        char a6[] = { 'm','n','o' };
-        char a7[] = { 'p','q','r','s' };
-        char a8[] = { 't','u','v' };
-        char a9[] = { 'w','x','y','z' };
+        char l[][4] = { {},{},{'a','b','c'},{'d','e','f'},{'g','h','i'},{'j','k','l'},{'m','n','o'},{'p','q','r','s'},{'t','u','v'},{'w','x','y','z'}
+        };
+
         int num = digits[curIndex] - '0';
-        if (num == 2) {
-            for (char* ptr = std::begin(a2); ptr != std::end(a2); ++ptr) {
-                char item = *ptr;
-                // 在这里使用item
-                res.push_back(item);
-                backTracking(curIndex + 1, size, digits, res, result);
-                res.pop_back();
-
-
+        for (auto item : l[num]) {
+            if (item >= 'a' and item <= 'z') {
+                temp.push_back(item);
+                backTracking(curIndex + 1, size, digits, temp, result);
+                temp.pop_back();
             }
-            return;
+
         }
-        if (num == 3) {
-            for (char* ptr = std::begin(a3); ptr != std::end(a3); ++ptr) {
-                char item = *ptr;
-                // 在这里使用item
-                res.push_back(item);
-                backTracking(curIndex + 1, size, digits, res, result);
-                res.pop_back();
 
-
-            }
-            return;
-        }
-        if (num == 4) {
-            for (char* ptr = std::begin(a4); ptr != std::end(a4); ++ptr) {
-                char item = *ptr;
-                // 在这里使用item
-                res.push_back(item);
-                backTracking(curIndex + 1, size, digits, res, result);
-                res.pop_back();
-
-
-            }
-            return;
-        }
-        if (num == 5) {
-            for (char* ptr = std::begin(a5); ptr != std::end(a5); ++ptr) {
-                char item = *ptr;
-                // 在这里使用item
-                res.push_back(item);
-                backTracking(curIndex + 1, size, digits, res, result);
-                res.pop_back();
-
-
-            }
-            return;
-        }
-        if (num == 6) {
-            for (char* ptr = std::begin(a6); ptr != std::end(a6); ++ptr) {
-                char item = *ptr;
-                // 在这里使用item
-                res.push_back(item);
-                backTracking(curIndex + 1, size, digits, res, result);
-                res.pop_back();
-
-
-            }
-            return;
-        }
-        if (num == 7) {
-            for (char* ptr = std::begin(a7); ptr != std::end(a7); ++ptr) {
-                char item = *ptr;
-                // 在这里使用item
-                res.push_back(item);
-                backTracking(curIndex + 1, size, digits, res, result);
-                res.pop_back();
-
-
-            }
-            return;
-        }
-        if (num == 8) {
-            for (char* ptr = std::begin(a8); ptr != std::end(a8); ++ptr) {
-                char item = *ptr;
-                // 在这里使用item
-                res.push_back(item);
-                backTracking(curIndex + 1, size, digits, res, result);
-                res.pop_back();
-
-
-            }
-            return;
-        }
-        if (num == 9) {
-            for (char* ptr = std::begin(a9); ptr != std::end(a9); ++ptr) {
-                char item = *ptr;
-                // 在这里使用item
-                res.push_back(item);
-                backTracking(curIndex + 1, size, digits, res, result);
-                res.pop_back();
-
-
-            }
-            return;
-        }
     }
+
+
+
+
+    //std::vector<std::string> letterCombinations(std::string digits) {
+    //    std::vector<std::string> result;
+    //    if (digits.size() == 0) return result;
+    //    std::string res;
+    //    backTracking(0, digits.size(), digits, res, result);
+    //    return result;
+    //}
+
+    //void backTracking(int curIndex, int size, const std::string& digits, std::string& res, std::vector<std::string>& result) {
+    //    if (curIndex == size) {
+    //        result.push_back(res);
+    //        return;
+    //    }
+    //    char a2[] = { 'a','b','c' };
+    //    char a3[] = { 'd','e','f' };
+    //    char a4[] = { 'g','h','i' };
+    //    char a5[] = { 'j','k','l' };
+    //    char a6[] = { 'm','n','o' };
+    //    char a7[] = { 'p','q','r','s' };
+    //    char a8[] = { 't','u','v' };
+    //    char a9[] = { 'w','x','y','z' };
+    //    int num = digits[curIndex] - '0';
+    //    if (num == 2) {
+    //        for (char* ptr = std::begin(a2); ptr != std::end(a2); ++ptr) {
+    //            char item = *ptr;
+    //            // 在这里使用item
+    //            res.push_back(item);
+    //            backTracking(curIndex + 1, size, digits, res, result);
+    //            res.pop_back();
+
+
+    //        }
+    //        return;
+    //    }
+    //    if (num == 3) {
+    //        for (char* ptr = std::begin(a3); ptr != std::end(a3); ++ptr) {
+    //            char item = *ptr;
+    //            // 在这里使用item
+    //            res.push_back(item);
+    //            backTracking(curIndex + 1, size, digits, res, result);
+    //            res.pop_back();
+
+
+    //        }
+    //        return;
+    //    }
+    //    if (num == 4) {
+    //        for (char* ptr = std::begin(a4); ptr != std::end(a4); ++ptr) {
+    //            char item = *ptr;
+    //            // 在这里使用item
+    //            res.push_back(item);
+    //            backTracking(curIndex + 1, size, digits, res, result);
+    //            res.pop_back();
+
+
+    //        }
+    //        return;
+    //    }
+    //    if (num == 5) {
+    //        for (char* ptr = std::begin(a5); ptr != std::end(a5); ++ptr) {
+    //            char item = *ptr;
+    //            // 在这里使用item
+    //            res.push_back(item);
+    //            backTracking(curIndex + 1, size, digits, res, result);
+    //            res.pop_back();
+
+
+    //        }
+    //        return;
+    //    }
+    //    if (num == 6) {
+    //        for (char* ptr = std::begin(a6); ptr != std::end(a6); ++ptr) {
+    //            char item = *ptr;
+    //            // 在这里使用item
+    //            res.push_back(item);
+    //            backTracking(curIndex + 1, size, digits, res, result);
+    //            res.pop_back();
+
+
+    //        }
+    //        return;
+    //    }
+    //    if (num == 7) {
+    //        for (char* ptr = std::begin(a7); ptr != std::end(a7); ++ptr) {
+    //            char item = *ptr;
+    //            // 在这里使用item
+    //            res.push_back(item);
+    //            backTracking(curIndex + 1, size, digits, res, result);
+    //            res.pop_back();
+
+
+    //        }
+    //        return;
+    //    }
+    //    if (num == 8) {
+    //        for (char* ptr = std::begin(a8); ptr != std::end(a8); ++ptr) {
+    //            char item = *ptr;
+    //            // 在这里使用item
+    //            res.push_back(item);
+    //            backTracking(curIndex + 1, size, digits, res, result);
+    //            res.pop_back();
+
+
+    //        }
+    //        return;
+    //    }
+    //    if (num == 9) {
+    //        for (char* ptr = std::begin(a9); ptr != std::end(a9); ++ptr) {
+    //            char item = *ptr;
+    //            // 在这里使用item
+    //            res.push_back(item);
+    //            backTracking(curIndex + 1, size, digits, res, result);
+    //            res.pop_back();
+
+
+    //        }
+    //        return;
+    //    }
+    //}
 };
 
 // 编码能力异常低下，舍近求远，代码臃肿
