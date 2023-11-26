@@ -137,6 +137,7 @@
     <ClCompile Include="121.cpp" />
     <ClCompile Include="122.cpp" />
     <ClCompile Include="128.cpp" />
+    <ClCompile Include="135.cpp" />
     <ClCompile Include="136.cpp" />
     <ClCompile Include="141.cpp" />
     <ClCompile Include="142.cpp" />
@@ -174,6 +175,7 @@
     <ClCompile Include="51.cpp" />
     <ClCompile Include="56.cpp" />
     <ClCompile Include="62.cpp" />
+    <ClCompile Include="714.cpp" />
     <ClCompile Include="73.cpp" />
     <ClCompile Include="738.cpp" />
     <ClCompile Include="73_2.cpp" />
