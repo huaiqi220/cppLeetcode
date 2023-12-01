@@ -160,12 +160,14 @@
     <ClCompile Include="236.cpp" />
     <ClCompile Include="239.cpp" />
     <ClCompile Include="242.cpp" />
+    <ClCompile Include="25.cpp" />
     <ClCompile Include="2698.cpp" />
     <ClCompile Include="148.cpp" />
     <ClCompile Include="3.cpp" />
     <ClCompile Include="300.cpp" />
     <ClCompile Include="322.cpp" />
     <ClCompile Include="34.cpp" />
+    <ClCompile Include="344.cpp" />
     <ClCompile Include="347.cpp" />
     <ClCompile Include="35.cpp" />
     <ClCompile Include="376.cpp" />
