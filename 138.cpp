@@ -31,6 +31,31 @@ class Solution {
         }
     };
 public:
+    // 几行代码能解决的搞半天，说到底，关键在于使用std::unordered_map<Node*, Node*> temp;来映射原始结点的新节点
+    // 这两个结点的映射加上递归，就是这题目的关键所在，实际递归时间复杂度一般，反而不如构建vector，random vector的方法
+    // 这与缓存、堆栈分配等底层有关，具体在此不继续深究
+    std::unordered_map<Node*, Node*> temp;
+    Node* copyRandomList(Node* head) {
+        if (head == nullptr)return nullptr;
+        Node* cur = new Node(head->val);
+        temp[head] = cur;
+        if (temp[head->next] != 0) {
+            cur->next = copyRandomList(head->next);
+        }
+        else {
+            cur->next = temp[head->next];
+        }
+        if (temp[head->random] != 0) {
+            cur->random = copyRandomList(head->random);
+        }
+        else {
+            cur->random = temp[head->random];
+        }
+        return cur;
+
+    }
+
+
     //Node* copyRandomList(Node* head) {
     //    std::unordered_map<Node*, int> temp;
     //    std::vector<int> random;
@@ -70,41 +95,7 @@ public:
     //    return newn[0];
 
     //}
-#include <unordered_map>
-#include <vector>
 
-    class Solution {
-    public:
-        Node* copyRandomList(Node* head) {
-            std::unordered_map<Node*, Node*> originalToCopy;
-            std::vector<Node*> newNodes;
-
-            // First pass: create nodes without random pointers
-            Node* cur = head;
-            while (cur) {
-                Node* newNode = new Node(cur->val);
-                originalToCopy[cur] = newNode;
-                newNodes.push_back(newNode);
-                cur = cur->next;
-            }
-
-            // Second pass: set next and random pointers
-            cur = head;
-            for (int i = 0; i < newNodes.size() - 1; ++i) {
-                newNodes[i]->next = newNodes[i + 1];
-                if (cur->random)
-                    newNodes[i]->random = originalToCopy[cur->random];
-                cur = cur->next;
-            }
-
-            // Handle the last node
-            if (cur) {
-                newNodes.back()->random = originalToCopy[cur->random];
-            }
-
-            return newNodes.empty() ? nullptr : newNodes[0];
-        }
-    };
 
 
 
