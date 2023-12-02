@@ -5,6 +5,64 @@
 
 class Solution {
 public:
+
+
+
+
+    
+    //Ð´Ì«¸´ÔÓÁË£¬Ö±½Ó³­´ð°¸°É
+    //std::string decodeString(std::string s) {
+    //    std::stack<int> numStack;
+    //    std::stack<char> markStack;
+    //    std::stack<std::string> strStack;
+    //    std::string numTemp;
+    //    std::string strTemp;
+    //    for (auto item : s) {
+    //        if (item >= '0' and item <= '9') {
+    //            if (!strTemp.empty()) {
+    //                strStack.push(strTemp);
+    //                strTemp.clear();
+    //            }
+    //            numTemp.push_back(item);
+    //            continue;
+    //        }
+    //        if (item == '[') { numStack.push(str2int(numTemp)); numTemp.clear(); markStack.push('['); continue; }
+    //        if (item >= 'a' and item <= 'z') { strTemp.push_back(item); continue; }
+    //        if (item == ']') {
+    //            if (!strTemp.empty()) {
+    //                strStack.push(strTemp);
+    //                strTemp.clear();
+    //            }
+    //            if (markStack.top() == '[') {
+    //                std::string xstr = strStack.top(); 
+    //                for (int i = 0; i < numStack.top(); i++) {
+    //                    xstr += strStack.top();
+    //                }
+    //                strStack.pop();
+    //                numStack.pop();
+    //                markStack.pop();
+    //                strStack.push(xstr);
+    //            }
+    //            continue;
+    //        }
+    //    }
+    //    std::string res;
+    //    res += strTemp;
+    //    while (!strStack.empty()) { res = strStack.top() + res; strStack.pop(); }
+
+    //    return res;
+
+    //}
+    //
+    //int str2int(std::string str1)
+    //{
+    //    int count = 0;
+    //    for (int i = str1.size() - 1; i >= 0; i--) {
+    //        count += (str1[i] - '0') * std::pow(10, i);
+    //    }
+    //    return count;
+    //}
+
     //std::string decodeString(std::string s) {
     //    std::stack<char> temp;
     //    if (s.size() == 1 or s.size() == 0) return s;
