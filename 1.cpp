@@ -32,4 +32,24 @@ public:
 
     //}
     // ´íÎó·½·¨
+
+
+    std::vector<int> twoSum(std::vector<int>& nums, int target) {
+        std::unordered_map<int, int> temp;
+        for (int i = 0; i < nums.size(); i++)
+        {
+            temp[nums[i]] = i + 1;
+        }
+        std::vector<int> res;
+        for (int i = 0; i < nums.size(); i++)
+        {
+            if (temp[target - nums[i]] != 0) {
+                res.push_back(i);
+                res.push_back(temp[target - nums[i]] - 1);
+                return res;
+            }
+        }
+        return res;
+    }
+
 };
