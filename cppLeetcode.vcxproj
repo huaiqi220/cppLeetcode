@@ -209,6 +209,7 @@
     <ClCompile Include="best_k_215.cpp" />
     <ClCompile Include="cppLeetcode.cpp" />
     <ClCompile Include="psort_148.cpp" />
+    <ClCompile Include="quicksort.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
