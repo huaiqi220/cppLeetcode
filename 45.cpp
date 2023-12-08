@@ -44,4 +44,23 @@ public:
     //}
 
     // 实现复杂了，扣索引细节浪费时间，不调了，看标准题解
+
+
+    int jump(std::vector<int>& nums) {
+        int curMin = nums.size() - 1;
+        int step = 0;
+        int curMark = nums.size() - 1;
+        while(curMin > 0)
+        {
+            for (int i = curMark - 1; i >=0; i--)
+            {
+                if (i + nums[i] >= curMark) curMin = i;
+            }
+            curMark = curMin;
+            step++;
+        }
+        return step;
+    }
+
+    // C++贪心 O(n^2)
 };
