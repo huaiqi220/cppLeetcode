@@ -186,6 +186,7 @@
     <ClCompile Include="45.cpp" />
     <ClCompile Include="455.cpp" />
     <ClCompile Include="48.cpp" />
+    <ClCompile Include="49.cpp" />
     <ClCompile Include="51.cpp" />
     <ClCompile Include="53.cpp" />
     <ClCompile Include="543.cpp" />
@@ -209,6 +210,10 @@
     <ClCompile Include="best_k_215.cpp" />
     <ClCompile Include="cppLeetcode.cpp" />
     <ClCompile Include="psort_148.cpp" />
+    <ClCompile Include="quicksort.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
