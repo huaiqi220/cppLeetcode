@@ -282,6 +282,9 @@
     <ClCompile Include="283.cpp">
       <Filter>源文件\头文件</Filter>
     </ClCompile>
+    <ClCompile Include="560.cpp">
+      <Filter>源文件\头文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
