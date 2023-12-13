@@ -151,7 +151,9 @@
     <ClCompile Include="152.cpp" />
     <ClCompile Include="155.cpp" />
     <ClCompile Include="160.cpp" />
+    <ClCompile Include="169.cpp" />
     <ClCompile Include="17.cpp" />
+    <ClCompile Include="189.cpp" />
     <ClCompile Include="19.cpp" />
     <ClCompile Include="198.cpp" />
     <ClCompile Include="199.cpp" />
@@ -171,6 +173,8 @@
     <ClCompile Include="2698.cpp" />
     <ClCompile Include="148.cpp" />
     <ClCompile Include="279.cpp" />
+    <ClCompile Include="283.cpp" />
+    <ClCompile Include="287.cpp" />
     <ClCompile Include="3.cpp" />
     <ClCompile Include="300.cpp" />
     <ClCompile Include="322.cpp" />
@@ -179,18 +183,22 @@
     <ClCompile Include="347.cpp" />
     <ClCompile Include="35.cpp" />
     <ClCompile Include="376.cpp" />
+    <ClCompile Include="39.cpp" />
     <ClCompile Include="394.cpp" />
     <ClCompile Include="406.cpp" />
     <ClCompile Include="42.cpp" />
     <ClCompile Include="437.cpp" />
     <ClCompile Include="45.cpp" />
+    <ClCompile Include="450.cpp" />
     <ClCompile Include="455.cpp" />
     <ClCompile Include="48.cpp" />
+    <ClCompile Include="49.cpp" />
     <ClCompile Include="51.cpp" />
     <ClCompile Include="53.cpp" />
     <ClCompile Include="543.cpp" />
     <ClCompile Include="55.cpp" />
     <ClCompile Include="56.cpp" />
+    <ClCompile Include="560.cpp" />
     <ClCompile Include="62.cpp" />
     <ClCompile Include="704.cpp" />
     <ClCompile Include="714.cpp" />
@@ -210,6 +218,9 @@
     <ClCompile Include="cppLeetcode.cpp" />
     <ClCompile Include="psort_148.cpp" />
     <ClCompile Include="quicksort.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -55,6 +55,7 @@ public:
     //    }
 
     //}
+    // 复杂又fw的方法，急死了
 
     //void swap(std::vector<int>& nums, int x, int y) {
     //    int cur = nums[y];
@@ -64,6 +65,56 @@ public:
     //    nums[x] = cur;
     //}
 
+    //void sortColors(std::vector<int>& nums) {
+    //    //我们使用整数 0、 1 和 2 分别表示红色、白色和蓝色。
+    //    int left = 0;
+    //    int right = nums.size() - 1;
+    //    while(left < right)
+    //    {
+    //        while (nums[left] < 2 and left < nums.size() -1)left++;
+    //        while (nums[right] > 0 and right > 0)right--;
+    //        if (left < right) {
+    //            std::swap(nums[left], nums[right]);
+    //        }
+    //    }
+
+
+    //}
+
+
+    // 单指针两遍扫描
+    //void sortColors(std::vector<int>& nums) {
+    //    int head_index = 0;
+    //    int moveindex = 0;
+    //    while (moveindex < nums.size()) {
+    //        if (nums[moveindex] == 0) {
+    //            std::swap(nums[head_index], nums[moveindex]);
+    //            moveindex++;
+    //            head_index++;
+    //        }
+    //        else {
+    //            moveindex++;
+    //        }
+    //    }
+
+    //    int end_index = nums.size() - 1;
+    //    moveindex = nums.size() - 1;
+    //    while (moveindex >= 0) {
+    //        if (nums[moveindex] == 2) {
+    //            std::swap(nums[end_index], nums[moveindex]);
+    //            moveindex--;
+    //            end_index--;
+    //        }
+    //        else {
+    //            moveindex--;
+    //        }
+    //    }
+
+    //}
+
+    // 双指针
+
+
+
 };
 
-// 复杂又fw的方法，急死了

@@ -264,5 +264,34 @@
     <ClCompile Include="quicksort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="49.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="287.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="39.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="189.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="169.cpp">
+      <Filter>源文件\头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="283.cpp">
+      <Filter>源文件\头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="560.cpp">
+      <Filter>源文件\头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="450.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>源文件\头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
