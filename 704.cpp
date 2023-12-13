@@ -3,7 +3,7 @@
 
 class Solution {
 public:
-    int search(std::vector<int>& nums, int target) {
+   /* int search(std::vector<int>& nums, int target) {
         return quicksort(nums, target, 0, nums.size() - 1);
     }
 
@@ -20,7 +20,12 @@ public:
         else if (nums[middle] > target) return quicksort(nums, target, left, middle);
         else if (nums[middle] < target) return quicksort(nums, target, middle, right);
         return -1;
-    }
+    }*/
+
+    int search(vector<int>& nums, int target) {
+
+    }   
+
 
 };
 
