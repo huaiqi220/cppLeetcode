@@ -15,7 +15,8 @@ public:
 
 	void QuickSort(std::vector<int>& nums, int left, int right)
 	{
-		
+		int origin_left = left;
+		int origin_right = right;
 		int pivor = nums[left];
 		while (left< right)
 		{
@@ -26,7 +27,9 @@ public:
 			nums[left] = temp;
 
 		}
-		QuickSort(nums,left,)
+
+		QuickSort(nums, origin_left, left);
+		QuickSort(nums, right, origin_right);
 
 	}
 
