@@ -79,6 +79,44 @@ public:
             count++;
         }
     }*/
+    ListNode* reverseBetween(ListNode* head, int left, int right) {
+        int count = 0;
+        ListNode* dummy = new ListNode(0);
+        dummy->next = head;
+        ListNode* moveptr = dummy;
+        ListNode* leftptr = nullptr;
+        ListNode* rightptr = nullptr;
+        ListNode* reverse1 = nullptr;
+        while (moveptr != nullptr)
+        {
+            if (count == left - 1) {
+                leftptr = moveptr;
+            }
+            if (count == left) {
+                reverse1 = moveptr;
+            }
+            if (count == right + 1) {
+                rightptr = moveptr;
+            }
+            count = count + 1;
+            moveptr = moveptr->next;
+        }
+
+        leftptr->next = rightptr;
+        while (reverse1 != nullptr and reverse1 != rightptr)
+        {
+            ListNode* cur = reverse1;
+            reverse1 = reverse1->next;
+            cur->next = leftptr->next;
+            leftptr->next = cur;
+        }
+        return dummy->next;
+
+    }
+
+    // 两次遍历，通过头插法，时间复杂度为O(n)，空间复杂度为O(1)
+
+     
 
 
 };

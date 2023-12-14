@@ -43,22 +43,22 @@ public:
     }
 
 
-    int pathSum(TreeNode* root, int targetSum) {
-        int count = 0;
-        std::deque<TreeNode*> temp;
-        if (root == nullptr) return 0;
-        temp.push_back(root);
-        while (!temp.empty())
-        {
-            count += pathFromThis(temp.front(), targetSum);
-            temp.pop_front();
-            if (temp.front()->left)temp.push_back(temp.front()->left);
-            if (temp.front()->right)temp.push_back(temp.front()->right);
-            
-        }
-        return count;
-        
-    }
+    //int pathSum(TreeNode* root, int targetSum) {
+    //    int count = 0;
+    //    std::deque<TreeNode*> temp;
+    //    if (root == nullptr) return 0;
+    //    temp.push_back(root);
+    //    while (!temp.empty())
+    //    {
+    //        count += pathFromThis(temp.front(), targetSum);
+    //        temp.pop_front();
+    //        if (temp.front()->left)temp.push_back(temp.front()->left);
+    //        if (temp.front()->right)temp.push_back(temp.front()->right);
+    //        
+    //    }
+    //    return count;
+    //    
+    //}
 
     //int pathFromThis(TreeNode* root, int val) {
     //    if (root == nullptr) return 0;
