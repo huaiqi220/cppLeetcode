@@ -216,6 +216,7 @@
     <ClCompile Include="994.cpp" />
     <ClCompile Include="best_k_215.cpp" />
     <ClCompile Include="cppLeetcode.cpp" />
+    <ClCompile Include="myList.cpp" />
     <ClCompile Include="psort_148.cpp" />
     <ClCompile Include="quicksort.cpp" />
   </ItemGroup>
